@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -53,30 +56,35 @@ public record CreateImpBasedAudienceGroupResponse (
     * The audience ID.
     */
     
+    @Nullable
     @JsonProperty("audienceGroupId")
     Long audienceGroupId,
 /**
     * Get type
     */
     
+    @Nullable
     @JsonProperty("type")
     AudienceGroupType type,
 /**
     * The audience&#39;s name.
     */
     
+    @Nullable
     @JsonProperty("description")
     String description,
 /**
     * When the audience was created (in UNIX time).
     */
     
+    @Nullable
     @JsonProperty("created")
     Long created,
 /**
     * The request ID that was specified when the audience was created.
     */
     
+    @Nullable
     @JsonProperty("requestId")
     String requestId
 

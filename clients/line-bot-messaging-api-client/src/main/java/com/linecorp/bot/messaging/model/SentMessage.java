@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -51,12 +54,14 @@ public record SentMessage (
     * ID of the sent message.
     */
     
+    @Nonnull
     @JsonProperty("id")
     String id,
 /**
     * Quote token of the message. Only included when a message object that can be specified as a quote target was sent as a push or reply message. 
     */
     
+    @Nullable
     @JsonProperty("quoteToken")
     String quoteToken
 

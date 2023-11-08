@@ -41,6 +41,7 @@ public record {{model.classname}} (
     {% if var.deprecated %}
     @Deprecated
     {% endif %}
+    {{ var.required ? '@Nonnull' : '@Nullable' }}
     @JsonProperty("{{var.baseName}}")
     {{var.datatypeWithEnum}} {{var.name}}{% if not loop.last %},{% endif %}
 {% endfor %}

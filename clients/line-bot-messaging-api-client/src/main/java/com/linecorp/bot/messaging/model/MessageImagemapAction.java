@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -54,18 +57,21 @@ public record MessageImagemapAction (
     * Get area
     */
     
+    @Nonnull
     @JsonProperty("area")
     ImagemapArea area,
 /**
     * Get text
     */
     
+    @Nonnull
     @JsonProperty("text")
     String text,
 /**
     * Get label
     */
     
+    @Nullable
     @JsonProperty("label")
     String label
 

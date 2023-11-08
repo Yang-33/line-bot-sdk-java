@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -53,18 +56,21 @@ public record GroupUserProfileResponse (
     * User&#39;s display name
     */
     
+    @Nonnull
     @JsonProperty("displayName")
     String displayName,
 /**
     * User ID
     */
     
+    @Nonnull
     @JsonProperty("userId")
     String userId,
 /**
     * Profile image URL. &#x60;https&#x60; image URL. Not included in the response if the user doesn&#39;t have a profile image.
     */
     
+    @Nullable
     @JsonProperty("pictureUrl")
     URI pictureUrl
 

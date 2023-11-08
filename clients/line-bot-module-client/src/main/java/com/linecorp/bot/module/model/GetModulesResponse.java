@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -56,12 +59,14 @@ public record GetModulesResponse (
     * Array of Bot list Item objects representing basic information about the bot.
     */
     
+    @Nonnull
     @JsonProperty("bots")
     List<ModuleBot> bots,
 /**
     * Continuation token. Used to get the next array of basic bot information. This property is only returned if there are more unreturned results. 
     */
     
+    @Nullable
     @JsonProperty("next")
     String next
 

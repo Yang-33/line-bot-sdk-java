@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -56,12 +59,14 @@ public record AttachedModuleContent (
     * User ID of the bot on the attached LINE Official Account
     */
     
+    @Nonnull
     @JsonProperty("botId")
     String botId,
 /**
     * An array of strings indicating the scope permitted by the admin of the LINE Official Account.
     */
     
+    @Nonnull
     @JsonProperty("scopes")
     List<String> scopes
 

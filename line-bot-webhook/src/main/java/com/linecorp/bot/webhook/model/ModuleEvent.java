@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -57,36 +60,42 @@ public record ModuleEvent (
     * Get source
     */
     
+    @Nullable
     @JsonProperty("source")
     Source source,
 /**
     * Time of the event in milliseconds.
     */
     
+    @Nonnull
     @JsonProperty("timestamp")
     Long timestamp,
 /**
     * Get mode
     */
     
+    @Nonnull
     @JsonProperty("mode")
     EventMode mode,
 /**
     * Webhook Event ID. An ID that uniquely identifies a webhook event. This is a string in ULID format.
     */
     
+    @Nonnull
     @JsonProperty("webhookEventId")
     String webhookEventId,
 /**
     * Get deliveryContext
     */
     
+    @Nonnull
     @JsonProperty("deliveryContext")
     DeliveryContext deliveryContext,
 /**
     * Get module
     */
     
+    @Nonnull
     @JsonProperty("module")
     ModuleContent module
 

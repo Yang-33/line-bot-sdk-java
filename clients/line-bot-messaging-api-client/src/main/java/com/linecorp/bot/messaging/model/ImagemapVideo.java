@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -54,24 +57,28 @@ public record ImagemapVideo (
     * Get originalContentUrl
     */
     
+    @Nullable
     @JsonProperty("originalContentUrl")
     URI originalContentUrl,
 /**
     * Get previewImageUrl
     */
     
+    @Nullable
     @JsonProperty("previewImageUrl")
     URI previewImageUrl,
 /**
     * Get area
     */
     
+    @Nullable
     @JsonProperty("area")
     ImagemapArea area,
 /**
     * Get externalLink
     */
     
+    @Nullable
     @JsonProperty("externalLink")
     ImagemapExternalLink externalLink
 

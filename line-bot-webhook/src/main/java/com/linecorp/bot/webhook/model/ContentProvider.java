@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -52,18 +55,21 @@ public record ContentProvider (
     * Provider of the image file.
     */
     
+    @Nonnull
     @JsonProperty("type")
     Type type,
 /**
     * URL of the image file. Only included when contentProvider.type is external.
     */
     
+    @Nullable
     @JsonProperty("originalContentUrl")
     URI originalContentUrl,
 /**
     * URL of the preview image. Only included when contentProvider.type is external.
     */
     
+    @Nullable
     @JsonProperty("previewImageUrl")
     URI previewImageUrl
 

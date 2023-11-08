@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -52,18 +55,21 @@ public record IssueStatelessChannelAccessTokenResponse (
     * A stateless channel access token. The token is an opaque string which means its format is an implementation detail and the consumer of this token should never try to use the data parsed from the token. 
     */
     
+    @Nonnull
     @JsonProperty("access_token")
     String accessToken,
 /**
     * Duration in seconds after which the issued access token expires
     */
     
+    @Nonnull
     @JsonProperty("expires_in")
     Integer expiresIn,
 /**
     * Token type. The value is always &#x60;Bearer&#x60;.
     */
     
+    @Nonnull
     @JsonProperty("token_type")
     String tokenType
 

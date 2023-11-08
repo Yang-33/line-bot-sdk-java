@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -55,6 +58,7 @@ public record Mention (
     * Array of one or more mention objects. Max: 20 mentions
     */
     
+    @Nonnull
     @JsonProperty("mentionees")
     List<Mentionee> mentionees
 

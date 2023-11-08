@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -56,30 +59,35 @@ public record RichMenuRequest (
     * Get size
     */
     
+    @Nullable
     @JsonProperty("size")
     RichMenuSize size,
 /**
     * &#x60;true&#x60; to display the rich menu by default. Otherwise, &#x60;false&#x60;.
     */
     
+    @Nullable
     @JsonProperty("selected")
     Boolean selected,
 /**
     * Name of the rich menu. This value can be used to help manage your rich menus and is not displayed to users.
     */
     
+    @Nullable
     @JsonProperty("name")
     String name,
 /**
     * Text displayed in the chat bar
     */
     
+    @Nullable
     @JsonProperty("chatBarText")
     String chatBarText,
 /**
     * Array of area objects which define the coordinates and size of tappable areas
     */
     
+    @Nullable
     @JsonProperty("areas")
     List<RichMenuArea> areas
 

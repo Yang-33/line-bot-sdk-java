@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -55,30 +58,35 @@ public record FlexVideo (
     * Get url
     */
     
+    @Nonnull
     @JsonProperty("url")
     URI url,
 /**
     * Get previewUrl
     */
     
+    @Nonnull
     @JsonProperty("previewUrl")
     URI previewUrl,
 /**
     * Get altContent
     */
     
+    @Nonnull
     @JsonProperty("altContent")
     FlexComponent altContent,
 /**
     * Get aspectRatio
     */
     
+    @Nullable
     @JsonProperty("aspectRatio")
     String aspectRatio,
 /**
     * Get action
     */
     
+    @Nullable
     @JsonProperty("action")
     Action action
 

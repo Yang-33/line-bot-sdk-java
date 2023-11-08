@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -58,18 +61,21 @@ public record GetStatisticsPerUnitResponse (
     * Get overview
     */
     
+    @Nonnull
     @JsonProperty("overview")
     GetStatisticsPerUnitResponseOverview overview,
 /**
     * Array of information about individual message bubbles.
     */
     
+    @Nonnull
     @JsonProperty("messages")
     List<GetStatisticsPerUnitResponseMessage> messages,
 /**
     * Array of information about opened URLs in the message.
     */
     
+    @Nonnull
     @JsonProperty("clicks")
     List<GetStatisticsPerUnitResponseClick> clicks
 

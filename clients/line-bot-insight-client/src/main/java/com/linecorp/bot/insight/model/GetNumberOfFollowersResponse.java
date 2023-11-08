@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -52,24 +55,28 @@ public record GetNumberOfFollowersResponse (
     * Calculation status.
     */
     
+    @Nullable
     @JsonProperty("status")
     Status status,
 /**
     * The number of times, as of the specified date, that a user added this LINE Official Account as a friend for the first time. The number doesn&#39;t decrease even if a user later blocks the account or when they delete their LINE account. 
     */
     
+    @Nullable
     @JsonProperty("followers")
     Long followers,
 /**
     * The number of users, as of the specified date, that the LINE Official Account can reach through targeted messages based on gender, age, and/or region. This number only includes users who are active on LINE or LINE services and whose demographics have a high level of certainty. 
     */
     
+    @Nullable
     @JsonProperty("targetedReaches")
     Long targetedReaches,
 /**
     * The number of users blocking the account as of the specified date. The number decreases when a user unblocks the account.   
     */
     
+    @Nullable
     @JsonProperty("blocks")
     Long blocks
 

@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -53,12 +56,14 @@ public record AllMentionee (
     * Index position of the user mention for a character in text, with the first character being at position 0.
     */
     
+    @Nonnull
     @JsonProperty("index")
     Integer index,
 /**
     * The length of the text of the mentioned user. For a mention @example, 8 is the length.
     */
     
+    @Nonnull
     @JsonProperty("length")
     Integer length
 

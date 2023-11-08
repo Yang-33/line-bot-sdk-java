@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -60,36 +63,42 @@ public record GetFriendsDemographicsResponse (
     * true if friend demographic information is available.
     */
     
+    @Nullable
     @JsonProperty("available")
     Boolean available,
 /**
     * Percentage per gender.
     */
     
+    @Nullable
     @JsonProperty("genders")
     List<GenderTile> genders,
 /**
     * Percentage per age group.
     */
     
+    @Nullable
     @JsonProperty("ages")
     List<AgeTile> ages,
 /**
     * Percentage per area.
     */
     
+    @Nullable
     @JsonProperty("areas")
     List<AreaTile> areas,
 /**
     * Percentage by OS.
     */
     
+    @Nullable
     @JsonProperty("appTypes")
     List<AppTypeTile> appTypes,
 /**
     * Percentage per friendship duration.
     */
     
+    @Nullable
     @JsonProperty("subscriptionPeriods")
     List<SubscriptionPeriodTile> subscriptionPeriods
 

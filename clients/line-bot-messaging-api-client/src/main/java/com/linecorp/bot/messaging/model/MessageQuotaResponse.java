@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -53,12 +56,14 @@ public record MessageQuotaResponse (
     * Get type
     */
     
+    @Nonnull
     @JsonProperty("type")
     QuotaType type,
 /**
     * The target limit for sending messages in the current month. This property is returned when the &#x60;type&#x60; property has a value of &#x60;limited&#x60;. 
     */
     
+    @Nullable
     @JsonProperty("value")
     Long value
 

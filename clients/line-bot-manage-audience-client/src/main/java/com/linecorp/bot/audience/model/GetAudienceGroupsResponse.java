@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -56,36 +59,42 @@ public record GetAudienceGroupsResponse (
     * An array of audience data. If there are no audiences that match the specified filter, an empty array will be returned.
     */
     
+    @Nullable
     @JsonProperty("audienceGroups")
     List<AudienceGroup> audienceGroups,
 /**
     * true when this is not the last page.
     */
     
+    @Nullable
     @JsonProperty("hasNextPage")
     Boolean hasNextPage,
 /**
     * The total number of audiences that can be returned with the specified filter.
     */
     
+    @Nullable
     @JsonProperty("totalCount")
     Long totalCount,
 /**
     * Of the audiences you can get with the specified filter, the number of audiences with the update permission set to READ_WRITE.
     */
     
+    @Nullable
     @JsonProperty("readWriteAudienceGroupTotalCount")
     Long readWriteAudienceGroupTotalCount,
 /**
     * The current page number.
     */
     
+    @Nullable
     @JsonProperty("page")
     Long page,
 /**
     * The maximum number of audiences on the current page.
     */
     
+    @Nullable
     @JsonProperty("size")
     Long size
 

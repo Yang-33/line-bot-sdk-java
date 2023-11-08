@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -55,12 +58,14 @@ public record GetAggregationUnitNameListResponse (
     * An array of strings indicating the names of aggregation units used this month.
     */
     
+    @Nonnull
     @JsonProperty("customAggregationUnits")
     List<String> customAggregationUnits,
 /**
     * A continuation token to get the next array of unit names. Returned only when there are remaining aggregation units that weren&#39;t returned in customAggregationUnits in the original request.  
     */
     
+    @Nullable
     @JsonProperty("next")
     String next
 

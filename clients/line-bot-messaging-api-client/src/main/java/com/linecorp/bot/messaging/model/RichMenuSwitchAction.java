@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -53,18 +56,21 @@ public record RichMenuSwitchAction (
     * Label for the action.
     */
     
+    @Nullable
     @JsonProperty("label")
     String label,
 /**
     * Get data
     */
     
+    @Nullable
     @JsonProperty("data")
     String data,
 /**
     * Get richMenuAliasId
     */
     
+    @Nullable
     @JsonProperty("richMenuAliasId")
     String richMenuAliasId
 

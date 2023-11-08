@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -56,24 +59,28 @@ public record CreateAudienceGroupRequest (
     * The audience&#39;s name. This is case-insensitive, meaning AUDIENCE and audience are considered identical. Max character limit: 120 
     */
     
+    @Nullable
     @JsonProperty("description")
     String description,
 /**
     * To specify recipients by IFAs: set true. To specify recipients by user IDs: set false or omit isIfaAudience property. 
     */
     
+    @Nullable
     @JsonProperty("isIfaAudience")
     Boolean isIfaAudience,
 /**
     * The description to register for the job (in jobs[].description). 
     */
     
+    @Nullable
     @JsonProperty("uploadDescription")
     String uploadDescription,
 /**
     * An array of user IDs or IFAs. Max number: 10,000 
     */
     
+    @Nullable
     @JsonProperty("audiences")
     List<Audience> audiences
 

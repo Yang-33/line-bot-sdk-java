@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -53,30 +56,35 @@ public record FlexBoxLinearGradient (
     * Get angle
     */
     
+    @Nullable
     @JsonProperty("angle")
     String angle,
 /**
     * Get startColor
     */
     
+    @Nullable
     @JsonProperty("startColor")
     String startColor,
 /**
     * Get endColor
     */
     
+    @Nullable
     @JsonProperty("endColor")
     String endColor,
 /**
     * Get centerColor
     */
     
+    @Nullable
     @JsonProperty("centerColor")
     String centerColor,
 /**
     * Get centerPosition
     */
     
+    @Nullable
     @JsonProperty("centerPosition")
     String centerPosition
 

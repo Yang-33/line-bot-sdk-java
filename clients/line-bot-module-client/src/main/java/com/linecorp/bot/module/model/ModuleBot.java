@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -52,30 +55,35 @@ public record ModuleBot (
     * Bot&#39;s user ID
     */
     
+    @Nonnull
     @JsonProperty("userId")
     String userId,
 /**
     * Bot&#39;s basic ID
     */
     
+    @Nonnull
     @JsonProperty("basicId")
     String basicId,
 /**
     * Bot&#39;s premium ID. Not included in the response if the premium ID isn&#39;t set.
     */
     
+    @Nullable
     @JsonProperty("premiumId")
     String premiumId,
 /**
     * Bot&#39;s display name
     */
     
+    @Nonnull
     @JsonProperty("displayName")
     String displayName,
 /**
     * Profile image URL. Image URL starting with &#x60;https://&#x60;. Not included in the response if the bot doesn&#39;t have a profile image.
     */
     
+    @Nullable
     @JsonProperty("pictureUrl")
     String pictureUrl
 

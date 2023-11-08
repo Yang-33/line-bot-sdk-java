@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -57,48 +60,56 @@ public record FlexBubble (
     * Get direction
     */
     
+    @Nullable
     @JsonProperty("direction")
     Direction direction,
 /**
     * Get styles
     */
     
+    @Nullable
     @JsonProperty("styles")
     FlexBubbleStyles styles,
 /**
     * Get header
     */
     
+    @Nullable
     @JsonProperty("header")
     FlexBox header,
 /**
     * Get hero
     */
     
+    @Nullable
     @JsonProperty("hero")
     FlexComponent hero,
 /**
     * Get body
     */
     
+    @Nullable
     @JsonProperty("body")
     FlexBox body,
 /**
     * Get footer
     */
     
+    @Nullable
     @JsonProperty("footer")
     FlexBox footer,
 /**
     * Get size
     */
     
+    @Nullable
     @JsonProperty("size")
     Size size,
 /**
     * Get action
     */
     
+    @Nullable
     @JsonProperty("action")
     Action action
 

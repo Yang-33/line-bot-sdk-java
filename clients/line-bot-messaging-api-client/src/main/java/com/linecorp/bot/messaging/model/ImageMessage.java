@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -57,24 +60,28 @@ public record ImageMessage (
     * Get quickReply
     */
     
+    @Nullable
     @JsonProperty("quickReply")
     QuickReply quickReply,
 /**
     * Get sender
     */
     
+    @Nullable
     @JsonProperty("sender")
     Sender sender,
 /**
     * Get originalContentUrl
     */
     
+    @Nonnull
     @JsonProperty("originalContentUrl")
     URI originalContentUrl,
 /**
     * Get previewImageUrl
     */
     
+    @Nonnull
     @JsonProperty("previewImageUrl")
     URI previewImageUrl
 

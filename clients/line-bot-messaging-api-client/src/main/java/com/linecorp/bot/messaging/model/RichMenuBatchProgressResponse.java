@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -54,18 +57,21 @@ public record RichMenuBatchProgressResponse (
     * Get phase
     */
     
+    @Nonnull
     @JsonProperty("phase")
     RichMenuBatchProgressPhase phase,
 /**
     * The accepted time in milliseconds of the request of batch control the rich menu.  Format: ISO 8601 (e.g. 2023-06-08T10:15:30.121Z) Timezone: UTC 
     */
     
+    @Nonnull
     @JsonProperty("acceptedTime")
     OffsetDateTime acceptedTime,
 /**
     * The completed time in milliseconds of rich menu batch control. Returned when the phase property is succeeded or failed.  Format: ISO 8601 (e.g. 2023-06-08T10:15:30.121Z) Timezone: UTC 
     */
     
+    @Nullable
     @JsonProperty("completedTime")
     OffsetDateTime completedTime
 

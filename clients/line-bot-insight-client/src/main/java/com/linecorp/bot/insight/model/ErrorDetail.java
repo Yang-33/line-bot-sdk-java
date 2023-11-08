@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -51,12 +54,14 @@ public record ErrorDetail (
     * Details of the error. Not included in the response under certain situations.
     */
     
+    @Nullable
     @JsonProperty("message")
     String message,
 /**
     * Location of where the error occurred. Returns the JSON field name or query parameter name of the request. Not included in the response under certain situations.
     */
     
+    @Nullable
     @JsonProperty("property")
     String property
 

@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -56,36 +59,42 @@ public record CarouselColumn (
     * Get thumbnailImageUrl
     */
     
+    @Nullable
     @JsonProperty("thumbnailImageUrl")
     URI thumbnailImageUrl,
 /**
     * Get imageBackgroundColor
     */
     
+    @Nullable
     @JsonProperty("imageBackgroundColor")
     String imageBackgroundColor,
 /**
     * Get title
     */
     
+    @Nullable
     @JsonProperty("title")
     String title,
 /**
     * Get text
     */
     
+    @Nonnull
     @JsonProperty("text")
     String text,
 /**
     * Get defaultAction
     */
     
+    @Nullable
     @JsonProperty("defaultAction")
     Action defaultAction,
 /**
     * Get actions
     */
     
+    @Nonnull
     @JsonProperty("actions")
     List<Action> actions
 

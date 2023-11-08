@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -51,30 +54,35 @@ public record GetMessageEventResponseClick (
     * The URL&#39;s serial number.
     */
     
+    @Nullable
     @JsonProperty("seq")
     Integer seq,
 /**
     * URL.
     */
     
+    @Nullable
     @JsonProperty("url")
     String url,
 /**
     * Number of times the URL was opened.
     */
     
+    @Nullable
     @JsonProperty("click")
     Long click,
 /**
     * Number of users that opened the URL.
     */
     
+    @Nullable
     @JsonProperty("uniqueClick")
     Long uniqueClick,
 /**
     * Number of users who opened this url through any link in the message. If a message contains two links to the same URL and a user opens both links, they&#39;re counted only once.
     */
     
+    @Nullable
     @JsonProperty("uniqueClickOfRequest")
     Long uniqueClickOfRequest
 

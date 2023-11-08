@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -52,12 +55,14 @@ public record CreateImpBasedAudienceGroupRequest (
     * The audience&#39;s name. This is case-insensitive, meaning &#x60;AUDIENCE&#x60; and &#x60;audience&#x60; are considered identical. Max character limit: 120 
     */
     
+    @Nullable
     @JsonProperty("description")
     String description,
 /**
     * The request ID of a broadcast or narrowcast message sent in the past 60 days. Each Messaging API request has a request ID. 
     */
     
+    @Nullable
     @JsonProperty("requestId")
     String requestId
 

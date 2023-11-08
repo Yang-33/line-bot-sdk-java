@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -56,18 +59,21 @@ public record AddAudienceToAudienceGroupRequest (
     * The audience ID.
     */
     
+    @Nullable
     @JsonProperty("audienceGroupId")
     Long audienceGroupId,
 /**
     * The audience&#39;s name.
     */
     
+    @Nullable
     @JsonProperty("uploadDescription")
     String uploadDescription,
 /**
     * An array of up to 10,000 user IDs or IFAs.
     */
     
+    @Nullable
     @JsonProperty("audiences")
     List<Audience> audiences
 

@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -52,24 +55,28 @@ public record MissionStickerRequest (
     * Destination user ID
     */
     
+    @Nonnull
     @JsonProperty("to")
     String to,
 /**
     * Package ID for a set of stickers
     */
     
+    @Nonnull
     @JsonProperty("productId")
     String productId,
 /**
     * &#x60;STICKER&#x60;
     */
     
+    @Nonnull
     @JsonProperty("productType")
     String productType,
 /**
     * &#x60;false&#x60;
     */
     
+    @Nonnull
     @JsonProperty("sendPresentMessage")
     Boolean sendPresentMessage
 

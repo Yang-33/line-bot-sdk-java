@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -53,18 +56,21 @@ public record LiffView (
     * Size of the LIFF app view. Specify one of these values: - compact - tall - full 
     */
     
+    @Nonnull
     @JsonProperty("type")
     Type type,
 /**
     * Endpoint URL. This is the URL of the web app that implements the LIFF app (e.g. https://example.com). Used when the LIFF app is launched using the LIFF URL. The URL scheme must be https. URL fragments (#URL-fragment) can&#39;t be specified. 
     */
     
+    @Nonnull
     @JsonProperty("url")
     URI url,
 /**
     * &#x60;true&#x60; to use the LIFF app in modular mode. When in modular mode, the action button in the header is not displayed. 
     */
     
+    @Nullable
     @JsonProperty("moduleMode")
     Boolean moduleMode
 

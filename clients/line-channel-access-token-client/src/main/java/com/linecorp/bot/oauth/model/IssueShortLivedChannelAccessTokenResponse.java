@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -52,18 +55,21 @@ public record IssueShortLivedChannelAccessTokenResponse (
     * A short-lived channel access token. Valid for 30 days. Note: Channel access tokens cannot be refreshed. 
     */
     
+    @Nonnull
     @JsonProperty("access_token")
     String accessToken,
 /**
     * Time until channel access token expires in seconds from time the token is issued.
     */
     
+    @Nonnull
     @JsonProperty("expires_in")
     Integer expiresIn,
 /**
     * Token type. The value is always &#x60;Bearer&#x60;.
     */
     
+    @Nonnull
     @JsonProperty("token_type")
     String tokenType
 

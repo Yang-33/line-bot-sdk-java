@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -57,18 +60,21 @@ public record CarouselTemplate (
     * Get columns
     */
     
+    @Nonnull
     @JsonProperty("columns")
     List<CarouselColumn> columns,
 /**
     * Get imageAspectRatio
     */
     
+    @Nullable
     @JsonProperty("imageAspectRatio")
     String imageAspectRatio,
 /**
     * Get imageSize
     */
     
+    @Nullable
     @JsonProperty("imageSize")
     String imageSize
 

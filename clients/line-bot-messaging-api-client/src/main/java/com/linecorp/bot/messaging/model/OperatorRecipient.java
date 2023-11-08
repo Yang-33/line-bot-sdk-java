@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -56,18 +59,21 @@ public record OperatorRecipient (
     * Create a new recipient object by taking the logical conjunction (AND) of the specified array of recipient objects. 
     */
     
+    @Nullable
     @JsonProperty("and")
     List<Recipient> and,
 /**
     * Create a new recipient object by taking the logical disjunction (OR) of the specified array of recipient objects. 
     */
     
+    @Nullable
     @JsonProperty("or")
     List<Recipient> or,
 /**
     * Get not
     */
     
+    @Nullable
     @JsonProperty("not")
     Recipient not
 

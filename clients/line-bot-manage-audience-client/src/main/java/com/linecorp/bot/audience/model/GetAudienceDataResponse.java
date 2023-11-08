@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -57,12 +60,14 @@ public record GetAudienceDataResponse (
     * Get audienceGroup
     */
     
+    @Nullable
     @JsonProperty("audienceGroup")
     AudienceGroup audienceGroup,
 /**
     * An array of jobs. This array is used to keep track of each attempt to add new user IDs or IFAs to an audience for uploading user IDs. Empty array is returned for any other type of audience. Max: 50 
     */
     
+    @Nullable
     @JsonProperty("jobs")
     List<AudienceGroupJob> jobs
 

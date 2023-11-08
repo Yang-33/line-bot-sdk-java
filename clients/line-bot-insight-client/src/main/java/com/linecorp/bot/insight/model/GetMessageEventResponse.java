@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -58,18 +61,21 @@ public record GetMessageEventResponse (
     * Get overview
     */
     
+    @Nullable
     @JsonProperty("overview")
     GetMessageEventResponseOverview overview,
 /**
     * Array of information about individual message bubbles.
     */
     
+    @Nullable
     @JsonProperty("messages")
     List<GetMessageEventResponseMessage> messages,
 /**
     * Array of information about opened URLs in the message.
     */
     
+    @Nullable
     @JsonProperty("clicks")
     List<GetMessageEventResponseClick> clicks
 

@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -55,48 +58,56 @@ public record AudienceGroupJob (
     * A job ID.
     */
     
+    @Nullable
     @JsonProperty("audienceGroupJobId")
     Long audienceGroupJobId,
 /**
     * An audience ID.
     */
     
+    @Nullable
     @JsonProperty("audienceGroupId")
     Long audienceGroupId,
 /**
     * The job&#39;s description.
     */
     
+    @Nullable
     @JsonProperty("description")
     String description,
 /**
     * Get type
     */
     
+    @Nullable
     @JsonProperty("type")
     AudienceGroupJobType type,
 /**
     * Get jobStatus
     */
     
+    @Nullable
     @JsonProperty("jobStatus")
     AudienceGroupJobStatus jobStatus,
 /**
     * Get failedType
     */
     
+    @Nullable
     @JsonProperty("failedType")
     AudienceGroupJobFailedType failedType,
 /**
     * The number of accounts (recipients) that were added or removed.
     */
     
+    @Nullable
     @JsonProperty("audienceCount")
     Long audienceCount,
 /**
     * When the job was created (in UNIX time).
     */
     
+    @Nullable
     @JsonProperty("created")
     Long created
 

@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -53,12 +56,14 @@ public record GetWebhookEndpointResponse (
     * Webhook URL
     */
     
+    @Nonnull
     @JsonProperty("endpoint")
     URI endpoint,
 /**
     * Webhook usage status. Send a webhook event from the LINE Platform to the webhook URL only if enabled.  &#x60;true&#x60;: Webhook usage is enabled. &#x60;false&#x60;: Webhook usage is disabled. 
     */
     
+    @Nonnull
     @JsonProperty("active")
     Boolean active
 

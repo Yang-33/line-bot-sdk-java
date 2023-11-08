@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -51,12 +54,14 @@ public record SubscriptionPeriodTile (
     * Subscription period. Possible values: &#x60;within7days&#x60;, &#x60;within90days&#x60;, &#x60;unknown&#x60; etc.
     */
     
+    @Nullable
     @JsonProperty("subscriptionPeriod")
     SubscriptionPeriod subscriptionPeriod,
 /**
     * Percentage. Possible values: [0.0,100.0] e.g. 0, 2.9, 37.6.
     */
     
+    @Nullable
     @JsonProperty("percentage")
     Double percentage
 

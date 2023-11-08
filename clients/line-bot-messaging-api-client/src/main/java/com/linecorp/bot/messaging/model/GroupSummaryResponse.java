@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -53,18 +56,21 @@ public record GroupSummaryResponse (
     * Group ID
     */
     
+    @Nonnull
     @JsonProperty("groupId")
     String groupId,
 /**
     * Group name
     */
     
+    @Nonnull
     @JsonProperty("groupName")
     String groupName,
 /**
     * Group icon URL. Not included in the response if the user doesn&#39;t set a group profile icon.
     */
     
+    @Nullable
     @JsonProperty("pictureUrl")
     URI pictureUrl
 

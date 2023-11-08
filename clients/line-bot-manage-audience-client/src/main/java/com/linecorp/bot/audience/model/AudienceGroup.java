@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -57,72 +60,84 @@ public record AudienceGroup (
     * The audience ID.
     */
     
+    @Nullable
     @JsonProperty("audienceGroupId")
     Long audienceGroupId,
 /**
     * Get type
     */
     
+    @Nullable
     @JsonProperty("type")
     AudienceGroupType type,
 /**
     * The audience&#39;s name.
     */
     
+    @Nullable
     @JsonProperty("description")
     String description,
 /**
     * Get status
     */
     
+    @Nullable
     @JsonProperty("status")
     AudienceGroupStatus status,
 /**
     * Get failedType
     */
     
+    @Nullable
     @JsonProperty("failedType")
     AudienceGroupFailedType failedType,
 /**
     * The number of users included in the audience.
     */
     
+    @Nullable
     @JsonProperty("audienceCount")
     Long audienceCount,
 /**
     * When the audience was created (in UNIX time).
     */
     
+    @Nullable
     @JsonProperty("created")
     Long created,
 /**
     * The request ID that was specified when the audience was created. This is only included when &#x60;audienceGroup.type&#x60; is CLICK or IMP. 
     */
     
+    @Nullable
     @JsonProperty("requestId")
     String requestId,
 /**
     * The URL that was specified when the audience was created. This is only included when &#x60;audienceGroup.type&#x60; is CLICK and link URL is specified. 
     */
     
+    @Nullable
     @JsonProperty("clickUrl")
     URI clickUrl,
 /**
     * The value indicating the type of account to be sent, as specified when creating the audience for uploading user IDs. 
     */
     
+    @Nullable
     @JsonProperty("isIfaAudience")
     Boolean isIfaAudience,
 /**
     * Get permission
     */
     
+    @Nullable
     @JsonProperty("permission")
     AudienceGroupPermission permission,
 /**
     * Get createRoute
     */
     
+    @Nullable
     @JsonProperty("createRoute")
     AudienceGroupCreateRoute createRoute
 

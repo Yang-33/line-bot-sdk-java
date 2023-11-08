@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -53,36 +56,42 @@ public record PostbackAction (
     * Label for the action.
     */
     
+    @Nullable
     @JsonProperty("label")
     String label,
 /**
     * Get data
     */
     
+    @Nullable
     @JsonProperty("data")
     String data,
 /**
     * Get displayText
     */
     
+    @Nullable
     @JsonProperty("displayText")
     String displayText,
 /**
     * Get text
     */
     
+    @Nullable
     @JsonProperty("text")
     String text,
 /**
     * Get inputOption
     */
     
+    @Nullable
     @JsonProperty("inputOption")
     InputOption inputOption,
 /**
     * Get fillInText
     */
     
+    @Nullable
     @JsonProperty("fillInText")
     String fillInText
 

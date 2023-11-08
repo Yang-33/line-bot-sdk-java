@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -53,36 +56,42 @@ public record FlexSpan (
     * Get text
     */
     
+    @Nullable
     @JsonProperty("text")
     String text,
 /**
     * Get size
     */
     
+    @Nullable
     @JsonProperty("size")
     String size,
 /**
     * Get color
     */
     
+    @Nullable
     @JsonProperty("color")
     String color,
 /**
     * Get weight
     */
     
+    @Nullable
     @JsonProperty("weight")
     Weight weight,
 /**
     * Get style
     */
     
+    @Nullable
     @JsonProperty("style")
     Style style,
 /**
     * Get decoration
     */
     
+    @Nullable
     @JsonProperty("decoration")
     Decoration decoration
 

@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -52,12 +55,14 @@ public record Sender (
     * Display name. Certain words such as &#x60;LINE&#x60; may not be used.
     */
     
+    @Nullable
     @JsonProperty("name")
     String name,
 /**
     * URL of the image to display as an icon when sending a message
     */
     
+    @Nullable
     @JsonProperty("iconUrl")
     URI iconUrl
 

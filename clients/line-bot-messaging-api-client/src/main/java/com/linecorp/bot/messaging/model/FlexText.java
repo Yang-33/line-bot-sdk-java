@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -58,132 +61,154 @@ public record FlexText (
     * Get flex
     */
     
+    @Nullable
     @JsonProperty("flex")
     Integer flex,
 /**
     * Get text
     */
     
+    @Nullable
     @JsonProperty("text")
     String text,
 /**
     * Get size
     */
     
+    @Nullable
     @JsonProperty("size")
     String size,
 /**
     * Get align
     */
     
+    @Nullable
     @JsonProperty("align")
     Align align,
 /**
     * Get gravity
     */
     
+    @Nullable
     @JsonProperty("gravity")
     Gravity gravity,
 /**
     * Get color
     */
     
+    @Nullable
     @JsonProperty("color")
     String color,
 /**
     * Get weight
     */
     
+    @Nullable
     @JsonProperty("weight")
     Weight weight,
 /**
     * Get style
     */
     
+    @Nullable
     @JsonProperty("style")
     Style style,
 /**
     * Get decoration
     */
     
+    @Nullable
     @JsonProperty("decoration")
     Decoration decoration,
 /**
     * Get wrap
     */
     
+    @Nullable
     @JsonProperty("wrap")
     Boolean wrap,
 /**
     * Get lineSpacing
     */
     
+    @Nullable
     @JsonProperty("lineSpacing")
     String lineSpacing,
 /**
     * Get margin
     */
     
+    @Nullable
     @JsonProperty("margin")
     String margin,
 /**
     * Get position
     */
     
+    @Nullable
     @JsonProperty("position")
     Position position,
 /**
     * Get offsetTop
     */
     
+    @Nullable
     @JsonProperty("offsetTop")
     String offsetTop,
 /**
     * Get offsetBottom
     */
     
+    @Nullable
     @JsonProperty("offsetBottom")
     String offsetBottom,
 /**
     * Get offsetStart
     */
     
+    @Nullable
     @JsonProperty("offsetStart")
     String offsetStart,
 /**
     * Get offsetEnd
     */
     
+    @Nullable
     @JsonProperty("offsetEnd")
     String offsetEnd,
 /**
     * Get action
     */
     
+    @Nullable
     @JsonProperty("action")
     Action action,
 /**
     * Get maxLines
     */
     
+    @Nullable
     @JsonProperty("maxLines")
     Integer maxLines,
 /**
     * Get contents
     */
     
+    @Nullable
     @JsonProperty("contents")
     List<FlexSpan> contents,
 /**
     * Get adjustMode
     */
     
+    @Nullable
     @JsonProperty("adjustMode")
     AdjustMode adjustMode,
 /**
     * Get scaling
     */
     
+    @Nullable
     @JsonProperty("scaling")
     Boolean scaling
 

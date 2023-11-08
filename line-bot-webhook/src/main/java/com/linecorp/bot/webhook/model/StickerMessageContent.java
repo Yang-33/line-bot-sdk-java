@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -57,48 +60,56 @@ public record StickerMessageContent (
     * Message ID
     */
     
+    @Nonnull
     @JsonProperty("id")
     String id,
 /**
     * Package ID
     */
     
+    @Nonnull
     @JsonProperty("packageId")
     String packageId,
 /**
     * Sticker ID
     */
     
+    @Nonnull
     @JsonProperty("stickerId")
     String stickerId,
 /**
     * Get stickerResourceType
     */
     
+    @Nonnull
     @JsonProperty("stickerResourceType")
     StickerResourceType stickerResourceType,
 /**
     * Array of up to 15 keywords describing the sticker. If a sticker has 16 or more keywords, a random selection of 15 keywords will be returned. The keyword selection is random for each event, so different keywords may be returned for the same sticker. 
     */
     
+    @Nullable
     @JsonProperty("keywords")
     List<String> keywords,
 /**
     * Any text entered by the user. This property is only included for message stickers. Max character limit: 100 
     */
     
+    @Nullable
     @JsonProperty("text")
     String text,
 /**
     * Quote token to quote this message. 
     */
     
+    @Nonnull
     @JsonProperty("quoteToken")
     String quoteToken,
 /**
     * Message ID of a quoted message. Only included when the received message quotes a past message.  
     */
     
+    @Nullable
     @JsonProperty("quotedMessageId")
     String quotedMessageId
 

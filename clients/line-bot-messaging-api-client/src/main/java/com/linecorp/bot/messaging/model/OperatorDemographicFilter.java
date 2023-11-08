@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -56,18 +59,21 @@ public record OperatorDemographicFilter (
     * Get and
     */
     
+    @Nullable
     @JsonProperty("and")
     List<DemographicFilter> and,
 /**
     * Get or
     */
     
+    @Nullable
     @JsonProperty("or")
     List<DemographicFilter> or,
 /**
     * Get not
     */
     
+    @Nullable
     @JsonProperty("not")
     DemographicFilter not
 

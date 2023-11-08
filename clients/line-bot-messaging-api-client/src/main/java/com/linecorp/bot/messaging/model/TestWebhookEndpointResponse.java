@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -53,30 +56,35 @@ public record TestWebhookEndpointResponse (
     * Result of the communication from the LINE platform to the webhook URL.
     */
     
+    @Nullable
     @JsonProperty("success")
     Boolean success,
 /**
     * Time of the event in milliseconds. Even in the case of a redelivered webhook, it represents the time the event occurred, not the time it was redelivered. 
     */
     
+    @Nonnull
     @JsonProperty("timestamp")
     OffsetDateTime timestamp,
 /**
     * The HTTP status code. If the webhook response isn&#39;t received, the status code is set to zero or a negative number.
     */
     
+    @Nonnull
     @JsonProperty("statusCode")
     Integer statusCode,
 /**
     * Reason for the response.
     */
     
+    @Nonnull
     @JsonProperty("reason")
     String reason,
 /**
     * Details of the response.
     */
     
+    @Nonnull
     @JsonProperty("detail")
     String detail
 

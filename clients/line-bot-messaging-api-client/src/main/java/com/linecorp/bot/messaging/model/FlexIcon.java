@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -55,60 +58,70 @@ public record FlexIcon (
     * Get url
     */
     
+    @Nonnull
     @JsonProperty("url")
     URI url,
 /**
     * Get size
     */
     
+    @Nullable
     @JsonProperty("size")
     String size,
 /**
     * Get aspectRatio
     */
     
+    @Nullable
     @JsonProperty("aspectRatio")
     String aspectRatio,
 /**
     * Get margin
     */
     
+    @Nullable
     @JsonProperty("margin")
     String margin,
 /**
     * Get position
     */
     
+    @Nullable
     @JsonProperty("position")
     Position position,
 /**
     * Get offsetTop
     */
     
+    @Nullable
     @JsonProperty("offsetTop")
     String offsetTop,
 /**
     * Get offsetBottom
     */
     
+    @Nullable
     @JsonProperty("offsetBottom")
     String offsetBottom,
 /**
     * Get offsetStart
     */
     
+    @Nullable
     @JsonProperty("offsetStart")
     String offsetStart,
 /**
     * Get offsetEnd
     */
     
+    @Nullable
     @JsonProperty("offsetEnd")
     String offsetEnd,
 /**
     * Get scaling
     */
     
+    @Nullable
     @JsonProperty("scaling")
     Boolean scaling
 

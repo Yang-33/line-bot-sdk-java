@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -58,36 +61,42 @@ public record TextMessageContent (
     * Message ID
     */
     
+    @Nonnull
     @JsonProperty("id")
     String id,
 /**
     * Message text.
     */
     
+    @Nonnull
     @JsonProperty("text")
     String text,
 /**
     * Array of one or more LINE emoji objects. Only included in the message event when the text property contains a LINE emoji.
     */
     
+    @Nullable
     @JsonProperty("emojis")
     List<Emoji> emojis,
 /**
     * Get mention
     */
     
+    @Nullable
     @JsonProperty("mention")
     Mention mention,
 /**
     * Quote token to quote this message. 
     */
     
+    @Nonnull
     @JsonProperty("quoteToken")
     String quoteToken,
 /**
     * Message ID of a quoted message. Only included when the received message quotes a past message.
     */
     
+    @Nullable
     @JsonProperty("quotedMessageId")
     String quotedMessageId
 

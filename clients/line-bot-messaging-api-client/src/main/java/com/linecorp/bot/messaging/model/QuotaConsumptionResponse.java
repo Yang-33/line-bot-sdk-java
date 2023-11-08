@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -52,6 +55,7 @@ public record QuotaConsumptionResponse (
     * The number of sent messages in the current month
     */
     
+    @Nonnull
     @JsonProperty("totalUsage")
     Long totalUsage
 

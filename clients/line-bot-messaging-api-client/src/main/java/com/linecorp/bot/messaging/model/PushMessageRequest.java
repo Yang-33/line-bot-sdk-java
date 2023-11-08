@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -56,24 +59,28 @@ public record PushMessageRequest (
     * ID of the receiver.
     */
     
+    @Nonnull
     @JsonProperty("to")
     String to,
 /**
     * List of Message objects.
     */
     
+    @Nonnull
     @JsonProperty("messages")
     List<Message> messages,
 /**
     * &#x60;true&#x60;: The user doesn’t receive a push notification when a message is sent. &#x60;false&#x60;: The user receives a push notification when the message is sent (unless they have disabled push notifications in LINE and/or their device). The default value is false. 
     */
     
+    @Nullable
     @JsonProperty("notificationDisabled")
     Boolean notificationDisabled,
 /**
     * List of aggregation unit name. Case-sensitive. This functions can only be used by corporate users who have submitted the required applications. 
     */
     
+    @Nullable
     @JsonProperty("customAggregationUnits")
     List<String> customAggregationUnits
 

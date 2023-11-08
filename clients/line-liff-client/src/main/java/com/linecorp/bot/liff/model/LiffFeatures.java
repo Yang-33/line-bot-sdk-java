@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -51,12 +54,14 @@ public record LiffFeatures (
     * &#x60;true&#x60; if the LIFF app supports Bluetooth® Low Energy for LINE Things. &#x60;false&#x60; otherwise. 
     */
     
+    @Nullable
     @JsonProperty("ble")
     Boolean ble,
 /**
     * &#x60;true&#x60; to use the 2D code reader in the LIFF app. false otherwise. The default value is &#x60;false&#x60;. 
     */
     
+    @Nullable
     @JsonProperty("qrCode")
     Boolean qrCode
 

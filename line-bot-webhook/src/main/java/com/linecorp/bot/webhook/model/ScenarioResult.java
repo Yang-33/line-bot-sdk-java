@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -56,48 +59,56 @@ public record ScenarioResult (
     * Scenario ID executed
     */
     
+    @Nullable
     @JsonProperty("scenarioId")
     String scenarioId,
 /**
     * Revision number of the scenario set containing the executed scenario
     */
     
+    @Nullable
     @JsonProperty("revision")
     Integer revision,
 /**
     * Timestamp for when execution of scenario action started (milliseconds, LINE app time)
     */
     
+    @Nonnull
     @JsonProperty("startTime")
     Long startTime,
 /**
     * Timestamp for when execution of scenario was completed (milliseconds, LINE app time)
     */
     
+    @Nonnull
     @JsonProperty("endTime")
     Long endTime,
 /**
     * Scenario execution completion status
     */
     
+    @Nonnull
     @JsonProperty("resultCode")
     String resultCode,
 /**
     * Execution result of individual operations specified in action. Only included when things.result.resultCode is success.
     */
     
+    @Nullable
     @JsonProperty("actionResults")
     List<ActionResult> actionResults,
 /**
     * Data contained in notification.
     */
     
+    @Nullable
     @JsonProperty("bleNotificationPayload")
     String bleNotificationPayload,
 /**
     * Error reason.
     */
     
+    @Nullable
     @JsonProperty("errorReason")
     String errorReason
 

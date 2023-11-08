@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -56,96 +59,112 @@ public record FlexImage (
     * Image URL (Max character limit: 2000) Protocol: HTTPS (TLS 1.2 or later) Image format: JPEG or PNG Maximum image size: 1024×1024 pixels Maximum file size: 10 MB (300 KB when the animated property is true) 
     */
     
+    @Nonnull
     @JsonProperty("url")
     URI url,
 /**
     * The ratio of the width or height of this component within the parent box.
     */
     
+    @Nullable
     @JsonProperty("flex")
     Integer flex,
 /**
     * The minimum amount of space to include before this component in its parent container. 
     */
     
+    @Nullable
     @JsonProperty("margin")
     String margin,
 /**
     * Reference for offsetTop, offsetBottom, offsetStart, and offsetEnd. Specify one of the following values:  &#x60;relative&#x60;: Use the previous box as reference. &#x60;absolute&#x60;: Use the top left of parent element as reference. The default value is relative. 
     */
     
+    @Nullable
     @JsonProperty("position")
     Position position,
 /**
     * Offset.
     */
     
+    @Nullable
     @JsonProperty("offsetTop")
     String offsetTop,
 /**
     * Offset.
     */
     
+    @Nullable
     @JsonProperty("offsetBottom")
     String offsetBottom,
 /**
     * Offset.
     */
     
+    @Nullable
     @JsonProperty("offsetStart")
     String offsetStart,
 /**
     * Offset.
     */
     
+    @Nullable
     @JsonProperty("offsetEnd")
     String offsetEnd,
 /**
     * Alignment style in horizontal direction. 
     */
     
+    @Nullable
     @JsonProperty("align")
     Align align,
 /**
     * Alignment style in vertical direction.
     */
     
+    @Nullable
     @JsonProperty("gravity")
     Gravity gravity,
 /**
     * The maximum image width. This is md by default. 
     */
     
+    @Nullable
     @JsonProperty("size")
     String size,
 /**
     * Aspect ratio of the image. &#x60;{width}:{height}&#x60; format. Specify the value of &#x60;{width}&#x60; and &#x60;{height}&#x60; in the range from &#x60;1&#x60; to &#x60;100000&#x60;. However, you cannot set &#x60;{height}&#x60; to a value that is more than three times the value of &#x60;{width}&#x60;. The default value is &#x60;1:1&#x60;. 
     */
     
+    @Nullable
     @JsonProperty("aspectRatio")
     String aspectRatio,
 /**
     * The display style of the image if the aspect ratio of the image and that specified by the aspectRatio property do not match. 
     */
     
+    @Nullable
     @JsonProperty("aspectMode")
     AspectMode aspectMode,
 /**
     * Background color of the image. Use a hexadecimal color code.
     */
     
+    @Nullable
     @JsonProperty("backgroundColor")
     String backgroundColor,
 /**
     * Get action
     */
     
+    @Nullable
     @JsonProperty("action")
     Action action,
 /**
     * When this is &#x60;true&#x60;, an animated image (APNG) plays. You can specify a value of true up to 10 images in a single message. You can&#39;t send messages that exceed this limit. This is &#x60;false&#x60; by default. Animated images larger than 300 KB aren&#39;t played back. 
     */
     
+    @Nullable
     @JsonProperty("animated")
     Boolean animated
 

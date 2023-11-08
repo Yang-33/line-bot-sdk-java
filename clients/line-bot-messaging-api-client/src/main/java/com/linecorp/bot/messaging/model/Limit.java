@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -53,12 +56,14 @@ public record Limit (
     * minimum: 1
     */
     
+    @Nullable
     @JsonProperty("max")
     Integer max,
 /**
     * If true, the message will be sent within the maximum number of deliverable messages. The default value is &#x60;false&#x60;.  Targets will be selected at random. 
     */
     
+    @Nullable
     @JsonProperty("upToRemainingQuota")
     Boolean upToRemainingQuota
 

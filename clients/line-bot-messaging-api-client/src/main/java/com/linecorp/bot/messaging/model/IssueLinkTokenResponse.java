@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -52,6 +55,7 @@ public record IssueLinkTokenResponse (
     * Link token. Link tokens are valid for 10 minutes and can only be used once.  
     */
     
+    @Nonnull
     @JsonProperty("linkToken")
     String linkToken
 

@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -51,24 +54,28 @@ public record Emoji (
     * Index position for a character in text, with the first character being at position 0.
     */
     
+    @Nonnull
     @JsonProperty("index")
     Integer index,
 /**
     * The length of the LINE emoji string. For LINE emoji (hello), 7 is the length.
     */
     
+    @Nonnull
     @JsonProperty("length")
     Integer length,
 /**
     * Product ID for a LINE emoji set.
     */
     
+    @Nonnull
     @JsonProperty("productId")
     String productId,
 /**
     * ID for a LINE emoji inside a set.
     */
     
+    @Nonnull
     @JsonProperty("emojiId")
     String emojiId
 

@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -53,6 +56,7 @@ public record RichMenuSize (
     * maximum: 2147483647
     */
     
+    @Nullable
     @JsonProperty("width")
     Long width,
 /**
@@ -61,6 +65,7 @@ public record RichMenuSize (
     * maximum: 2147483647
     */
     
+    @Nullable
     @JsonProperty("height")
     Long height
 

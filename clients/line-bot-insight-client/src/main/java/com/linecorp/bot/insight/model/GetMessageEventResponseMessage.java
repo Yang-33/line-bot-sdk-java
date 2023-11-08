@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -51,72 +54,84 @@ public record GetMessageEventResponseMessage (
     * Bubble&#39;s serial number.
     */
     
+    @Nullable
     @JsonProperty("seq")
     Integer seq,
 /**
     * Number of times the bubble was displayed.
     */
     
+    @Nullable
     @JsonProperty("impression")
     Long impression,
 /**
     * Number of times audio or video in the bubble started playing.
     */
     
+    @Nullable
     @JsonProperty("mediaPlayed")
     Long mediaPlayed,
 /**
     * Number of times audio or video in the bubble started playing and was played 25% of the total time.
     */
     
+    @Nullable
     @JsonProperty("mediaPlayed25Percent")
     Long mediaPlayed25Percent,
 /**
     * Number of times audio or video in the bubble started playing and was played 50% of the total time.
     */
     
+    @Nullable
     @JsonProperty("mediaPlayed50Percent")
     Long mediaPlayed50Percent,
 /**
     * Number of times audio or video in the bubble started playing and was played 75% of the total time.
     */
     
+    @Nullable
     @JsonProperty("mediaPlayed75Percent")
     Long mediaPlayed75Percent,
 /**
     * Number of times audio or video in the bubble started playing and was played 100% of the total time.
     */
     
+    @Nullable
     @JsonProperty("mediaPlayed100Percent")
     Long mediaPlayed100Percent,
 /**
     * Number of users that started playing audio or video in the bubble.
     */
     
+    @Nullable
     @JsonProperty("uniqueMediaPlayed")
     Long uniqueMediaPlayed,
 /**
     * Number of users that started playing audio or video in the bubble and played 25% of the total time.
     */
     
+    @Nullable
     @JsonProperty("uniqueMediaPlayed25Percent")
     Long uniqueMediaPlayed25Percent,
 /**
     * Number of users that started playing audio or video in the bubble and played 50% of the total time.
     */
     
+    @Nullable
     @JsonProperty("uniqueMediaPlayed50Percent")
     Long uniqueMediaPlayed50Percent,
 /**
     * Number of users that started playing audio or video in the bubble and played 75% of the total time.
     */
     
+    @Nullable
     @JsonProperty("uniqueMediaPlayed75Percent")
     Long uniqueMediaPlayed75Percent,
 /**
     * Number of users that started playing audio or video in the bubble and played 100% of the total time.
     */
     
+    @Nullable
     @JsonProperty("uniqueMediaPlayed100Percent")
     Long uniqueMediaPlayed100Percent
 

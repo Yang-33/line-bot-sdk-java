@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -58,162 +61,189 @@ public record FlexBox (
     * Get layout
     */
     
+    @Nonnull
     @JsonProperty("layout")
     Layout layout,
 /**
     * Get flex
     */
     
+    @Nullable
     @JsonProperty("flex")
     Integer flex,
 /**
     * Get contents
     */
     
+    @Nonnull
     @JsonProperty("contents")
     List<FlexComponent> contents,
 /**
     * Get spacing
     */
     
+    @Nullable
     @JsonProperty("spacing")
     String spacing,
 /**
     * Get margin
     */
     
+    @Nullable
     @JsonProperty("margin")
     String margin,
 /**
     * Get position
     */
     
+    @Nullable
     @JsonProperty("position")
     Position position,
 /**
     * Get offsetTop
     */
     
+    @Nullable
     @JsonProperty("offsetTop")
     String offsetTop,
 /**
     * Get offsetBottom
     */
     
+    @Nullable
     @JsonProperty("offsetBottom")
     String offsetBottom,
 /**
     * Get offsetStart
     */
     
+    @Nullable
     @JsonProperty("offsetStart")
     String offsetStart,
 /**
     * Get offsetEnd
     */
     
+    @Nullable
     @JsonProperty("offsetEnd")
     String offsetEnd,
 /**
     * Get backgroundColor
     */
     
+    @Nullable
     @JsonProperty("backgroundColor")
     String backgroundColor,
 /**
     * Get borderColor
     */
     
+    @Nullable
     @JsonProperty("borderColor")
     String borderColor,
 /**
     * Get borderWidth
     */
     
+    @Nullable
     @JsonProperty("borderWidth")
     String borderWidth,
 /**
     * Get cornerRadius
     */
     
+    @Nullable
     @JsonProperty("cornerRadius")
     String cornerRadius,
 /**
     * Get width
     */
     
+    @Nullable
     @JsonProperty("width")
     String width,
 /**
     * Get maxWidth
     */
     
+    @Nullable
     @JsonProperty("maxWidth")
     String maxWidth,
 /**
     * Get height
     */
     
+    @Nullable
     @JsonProperty("height")
     String height,
 /**
     * Get maxHeight
     */
     
+    @Nullable
     @JsonProperty("maxHeight")
     String maxHeight,
 /**
     * Get paddingAll
     */
     
+    @Nullable
     @JsonProperty("paddingAll")
     String paddingAll,
 /**
     * Get paddingTop
     */
     
+    @Nullable
     @JsonProperty("paddingTop")
     String paddingTop,
 /**
     * Get paddingBottom
     */
     
+    @Nullable
     @JsonProperty("paddingBottom")
     String paddingBottom,
 /**
     * Get paddingStart
     */
     
+    @Nullable
     @JsonProperty("paddingStart")
     String paddingStart,
 /**
     * Get paddingEnd
     */
     
+    @Nullable
     @JsonProperty("paddingEnd")
     String paddingEnd,
 /**
     * Get action
     */
     
+    @Nullable
     @JsonProperty("action")
     Action action,
 /**
     * Get justifyContent
     */
     
+    @Nullable
     @JsonProperty("justifyContent")
     JustifyContent justifyContent,
 /**
     * Get alignItems
     */
     
+    @Nullable
     @JsonProperty("alignItems")
     AlignItems alignItems,
 /**
     * Get background
     */
     
+    @Nullable
     @JsonProperty("background")
     FlexBoxBackground background
 

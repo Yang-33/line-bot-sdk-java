@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -54,84 +57,98 @@ public record FlexButton (
     * Get flex
     */
     
+    @Nullable
     @JsonProperty("flex")
     Integer flex,
 /**
     * Get color
     */
     
+    @Nullable
     @JsonProperty("color")
     String color,
 /**
     * Get style
     */
     
+    @Nullable
     @JsonProperty("style")
     Style style,
 /**
     * Get action
     */
     
+    @Nonnull
     @JsonProperty("action")
     Action action,
 /**
     * Get gravity
     */
     
+    @Nullable
     @JsonProperty("gravity")
     Gravity gravity,
 /**
     * Get margin
     */
     
+    @Nullable
     @JsonProperty("margin")
     String margin,
 /**
     * Get position
     */
     
+    @Nullable
     @JsonProperty("position")
     Position position,
 /**
     * Get offsetTop
     */
     
+    @Nullable
     @JsonProperty("offsetTop")
     String offsetTop,
 /**
     * Get offsetBottom
     */
     
+    @Nullable
     @JsonProperty("offsetBottom")
     String offsetBottom,
 /**
     * Get offsetStart
     */
     
+    @Nullable
     @JsonProperty("offsetStart")
     String offsetStart,
 /**
     * Get offsetEnd
     */
     
+    @Nullable
     @JsonProperty("offsetEnd")
     String offsetEnd,
 /**
     * Get height
     */
     
+    @Nullable
     @JsonProperty("height")
     Height height,
 /**
     * Get adjustMode
     */
     
+    @Nullable
     @JsonProperty("adjustMode")
     AdjustMode adjustMode,
 /**
     * Get scaling
     */
     
+    @Nullable
     @JsonProperty("scaling")
     Boolean scaling
 

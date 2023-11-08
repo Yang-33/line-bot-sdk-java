@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -56,18 +59,21 @@ public record PnpMessagesRequest (
     * Message to be sent.
     */
     
+    @Nonnull
     @JsonProperty("messages")
     List<Message> messages,
 /**
     * Message destination. Specify a phone number that has been normalized to E.164 format and hashed with SHA256.
     */
     
+    @Nonnull
     @JsonProperty("to")
     String to,
 /**
     * &#x60;true&#x60;: The user doesn’t receive a push notification when a message is sent. &#x60;false&#x60;: The user receives a push notification when the message is sent (unless they have disabled push notifications in LINE and/or their device). The default value is false. 
     */
     
+    @Nullable
     @JsonProperty("notificationDisabled")
     Boolean notificationDisabled
 

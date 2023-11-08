@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -52,30 +55,35 @@ public record GetStatisticsPerUnitResponseClick (
     * The URL&#39;s serial number.
     */
     
+    @Nonnull
     @JsonProperty("seq")
     Long seq,
 /**
     * URL.
     */
     
+    @Nonnull
     @JsonProperty("url")
     String url,
 /**
     * Number of times the URL in the bubble was opened.
     */
     
+    @Nullable
     @JsonProperty("click")
     Long click,
 /**
     * Number of users that opened the URL in the bubble.
     */
     
+    @Nullable
     @JsonProperty("uniqueClick")
     Long uniqueClick,
 /**
     * Number of users who opened this url through any link in the message. If another message bubble contains the same URL and a user opens both links, it&#39;s counted only once. 
     */
     
+    @Nullable
     @JsonProperty("uniqueClickOfRequest")
     Long uniqueClickOfRequest
 

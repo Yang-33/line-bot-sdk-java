@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -51,18 +54,21 @@ public record BeaconContent (
     * Hardware ID of the beacon that was detected
     */
     
+    @Nonnull
     @JsonProperty("hwid")
     String hwid,
 /**
     * Type of beacon event.
     */
     
+    @Nonnull
     @JsonProperty("type")
     Type type,
 /**
     * Device message of beacon that was detected.
     */
     
+    @Nullable
     @JsonProperty("dm")
     String dm
 

@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -51,18 +54,21 @@ public record VerifyChannelAccessTokenResponse (
     * The channel ID for which the channel access token was issued.
     */
     
+    @Nonnull
     @JsonProperty("client_id")
     String clientId,
 /**
     * Number of seconds before the channel access token expires.
     */
     
+    @Nonnull
     @JsonProperty("expires_in")
     Long expiresIn,
 /**
     * Permissions granted to the channel access token.
     */
     
+    @Nullable
     @JsonProperty("scope")
     String scope
 

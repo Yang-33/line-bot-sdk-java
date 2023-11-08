@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -58,42 +61,49 @@ public record LiffApp (
     * LIFF app ID
     */
     
+    @Nullable
     @JsonProperty("liffId")
     String liffId,
 /**
     * Get view
     */
     
+    @Nullable
     @JsonProperty("view")
     LiffView view,
 /**
     * Name of the LIFF app
     */
     
+    @Nullable
     @JsonProperty("description")
     String description,
 /**
     * Get features
     */
     
+    @Nullable
     @JsonProperty("features")
     LiffFeatures features,
 /**
     * How additional information in LIFF URLs is handled. concat is returned. 
     */
     
+    @Nullable
     @JsonProperty("permanentLinkPattern")
     String permanentLinkPattern,
 /**
     * Get scope
     */
     
+    @Nullable
     @JsonProperty("scope")
     List<LiffScope> scope,
 /**
     * Get botPrompt
     */
     
+    @Nullable
     @JsonProperty("botPrompt")
     LiffBotPrompt botPrompt
 

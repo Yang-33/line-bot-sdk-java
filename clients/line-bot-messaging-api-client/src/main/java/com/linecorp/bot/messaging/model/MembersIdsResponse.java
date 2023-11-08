@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -54,12 +57,14 @@ public record MembersIdsResponse (
     * List of user IDs of members in the group chat. Only users of LINE for iOS and LINE for Android are included in &#x60;memberIds&#x60;.
     */
     
+    @Nonnull
     @JsonProperty("memberIds")
     List<String> memberIds,
 /**
     * A continuation token to get the next array of user IDs of the members in the group chat. Returned only when there are remaining user IDs that were not returned in &#x60;memberIds&#x60; in the original request. 
     */
     
+    @Nullable
     @JsonProperty("next")
     String next
 

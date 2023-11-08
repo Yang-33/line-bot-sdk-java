@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -60,30 +63,35 @@ public record TextMessage (
     * Get quickReply
     */
     
+    @Nullable
     @JsonProperty("quickReply")
     QuickReply quickReply,
 /**
     * Get sender
     */
     
+    @Nullable
     @JsonProperty("sender")
     Sender sender,
 /**
     * Get text
     */
     
+    @Nonnull
     @JsonProperty("text")
     String text,
 /**
     * Get emojis
     */
     
+    @Nullable
     @JsonProperty("emojis")
     List<Emoji> emojis,
 /**
     * Quote token of the message you want to quote.
     */
     
+    @Nullable
     @JsonProperty("quoteToken")
     String quoteToken
 

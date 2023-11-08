@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -53,42 +56,49 @@ public record BotInfoResponse (
     * Bot&#39;s user ID
     */
     
+    @Nonnull
     @JsonProperty("userId")
     String userId,
 /**
     * Bot&#39;s basic ID
     */
     
+    @Nonnull
     @JsonProperty("basicId")
     String basicId,
 /**
     * Bot&#39;s premium ID. Not included in the response if the premium ID isn&#39;t set.
     */
     
+    @Nullable
     @JsonProperty("premiumId")
     String premiumId,
 /**
     * Bot&#39;s display name
     */
     
+    @Nonnull
     @JsonProperty("displayName")
     String displayName,
 /**
     * Profile image URL. &#x60;https&#x60; image URL. Not included in the response if the bot doesn&#39;t have a profile image.
     */
     
+    @Nullable
     @JsonProperty("pictureUrl")
     URI pictureUrl,
 /**
     * Chat settings set in the LINE Official Account Manager. One of:  &#x60;chat&#x60;: Chat is set to \&quot;On\&quot;. &#x60;bot&#x60;: Chat is set to \&quot;Off\&quot;. 
     */
     
+    @Nonnull
     @JsonProperty("chatMode")
     ChatMode chatMode,
 /**
     * Automatic read setting for messages. If the chat is set to \&quot;Off\&quot;, auto is returned. If the chat is set to \&quot;On\&quot;, manual is returned.  &#x60;auto&#x60;: Auto read setting is enabled. &#x60;manual&#x60;: Auto read setting is disabled.  
     */
     
+    @Nonnull
     @JsonProperty("markAsReadMode")
     MarkAsReadMode markAsReadMode
 

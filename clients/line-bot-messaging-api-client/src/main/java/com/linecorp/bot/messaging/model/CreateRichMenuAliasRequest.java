@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -52,12 +55,14 @@ public record CreateRichMenuAliasRequest (
     * Rich menu alias ID, which can be any ID, unique for each channel.
     */
     
+    @Nonnull
     @JsonProperty("richMenuAliasId")
     String richMenuAliasId,
 /**
     * The rich menu ID to be associated with the rich menu alias.
     */
     
+    @Nonnull
     @JsonProperty("richMenuId")
     String richMenuId
 

@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -54,36 +57,42 @@ public record DatetimePickerAction (
     * Label for the action.
     */
     
+    @Nullable
     @JsonProperty("label")
     String label,
 /**
     * Get data
     */
     
+    @Nullable
     @JsonProperty("data")
     String data,
 /**
     * Get mode
     */
     
+    @Nullable
     @JsonProperty("mode")
     Mode mode,
 /**
     * Get initial
     */
     
+    @Nullable
     @JsonProperty("initial")
     String initial,
 /**
     * Get max
     */
     
+    @Nullable
     @JsonProperty("max")
     String max,
 /**
     * Get min
     */
     
+    @Nullable
     @JsonProperty("min")
     String min
 

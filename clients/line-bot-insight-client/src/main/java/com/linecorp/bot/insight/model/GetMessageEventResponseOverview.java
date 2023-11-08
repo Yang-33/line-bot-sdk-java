@@ -30,6 +30,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -51,42 +54,49 @@ public record GetMessageEventResponseOverview (
     * Request ID.
     */
     
+    @Nullable
     @JsonProperty("requestId")
     String requestId,
 /**
     * UNIX timestamp for message delivery time in seconds.
     */
     
+    @Nullable
     @JsonProperty("timestamp")
     Long timestamp,
 /**
     * Number of messages delivered. This property shows values of less than 20. However, if all messages have not been sent, it will be null. 
     */
     
+    @Nullable
     @JsonProperty("delivered")
     Long delivered,
 /**
     * Number of users who opened the message, meaning they displayed at least 1 bubble.
     */
     
+    @Nullable
     @JsonProperty("uniqueImpression")
     Long uniqueImpression,
 /**
     * Number of users who opened any URL in the message.
     */
     
+    @Nullable
     @JsonProperty("uniqueClick")
     Long uniqueClick,
 /**
     * Number of users who started playing any video or audio in the message.
     */
     
+    @Nullable
     @JsonProperty("uniqueMediaPlayed")
     Long uniqueMediaPlayed,
 /**
     * Number of users who played the entirety of any video or audio in the message.
     */
     
+    @Nullable
     @JsonProperty("uniqueMediaPlayed100Percent")
     Long uniqueMediaPlayed100Percent
 
