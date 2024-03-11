@@ -83,8 +83,9 @@ public class MessagingApiClientExTest {
 
     @Test
     public void getFollowers() throws IOException {
-        stubFor(get(urlEqualTo("/v2/bot/followers/ids")).willReturn(
-                aResponse()
+        stubFor(get(urlPathEqualTo("/v2/bot/followers/ids"))
+                .withQueryParam("limit", equalTo(String.valueOf(99)))
+                .willReturn(aResponse()
                         .withStatus(200)
                         .withHeader("content-type", "application/json")
                         .withHeader("x-line-request-id", "ppp")
@@ -92,7 +93,6 @@ public class MessagingApiClientExTest {
                                 "  \"userIds\": [\"U4af4980629...\", \"U0c229f96c4...\", \"U95afb1d4df...\"],\n" +
                                 "  \"next\": \"yANU9IA...\"\n" +
                                 "}")));
-
         // Do
         Result<GetFollowersResponse> result = target.getFollowers(null, 99)
                 .join();
