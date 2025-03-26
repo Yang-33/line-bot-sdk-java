@@ -9,6 +9,9 @@ on:
 jobs:
   check-eol-newrelease:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
     steps:
       - name: Check out code
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
@@ -22,8 +25,8 @@ jobs:
               languageName: 'Java',
               eolJsonUrl: 'https://endoflife.date/api/eclipse-temurin.json',
               eolViewUrl: 'https://endoflife.date/eclipse-temurin',
-              eolLookbackDays: 100,
-              newReleaseThresholdDays: 100,
+              eolLookbackDays: 1000,
+              newReleaseThresholdDays: 1000,
               ltsOnly: true,
               retryCount: 3,
               retryIntervalSec: 30
